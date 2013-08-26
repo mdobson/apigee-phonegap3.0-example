@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Places to See</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+  <script src="https://apigee.com/usergrid/sdk/usergrid.0.10.5.js"></script>
+</head>
+<body>
+    <div data-role="page" data-control-title="Home" data-theme="b" id="page1">
+      <div data-theme="b" data-role="header">
+          <h3>
+              Places to See
+          </h3>
+          <a href="#page-new-landmark" id="btn-compose" data-icon="plus" data-iconpos="right" data-inline="true" data-role="button" data-rel="dialog" data-transition="fade" class="ui-btn-right">Add</a>
+      </div>
+      <div data-role="content">
+          <ul data-role="listview" data-divider-theme="b" data-inset="false" id="landmarks-list">
+              <li data-theme="c">
+                  <h4>Landmark Name 1</h4>
+                  <p>Landmark Location 1</p>
+              </li>
+              <li data-theme="c">
+                  <h4>Landmark Name 2</h4>
+                  <p>Landmark Location 2</p>
+              </li>
+          </ul>
+      </div>
+    </div>
+    <div data-role="page" data-theme="b" id="page-new-landmark">
+      <div data-role="header" data-theme="b">
+          <h1>Add a New Landmark</h1>
+      </div>
+      <div data-role="content">
+          <form>
+              <label for="name-field">Name</label>
+              <textarea id="name-field"></textarea>
+              <label for="location-field">Location</label>
+              <textarea id="location-field"></textarea>
+          </form>    
+          <a href="#page1" data-role="button" data-theme="c" data-inline="true">Cancel</a>
+          <button id="create-button" data-inline="true">Create</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/apigee.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    </body>
+</html>
